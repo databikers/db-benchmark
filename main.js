@@ -156,7 +156,7 @@ async function benchmarkDianaDb() {
     });
 
     const userModel = new Model({
-      database: 'user',
+      database: 'test',
       collection: 'user',
       name: 'User',
       schema: {
