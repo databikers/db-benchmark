@@ -150,10 +150,11 @@ async function benchmarkDianaDb() {
       password: 'admin',
       host: '127.0.0.1',
       port: 34567,
-      connectionPoolSize: 5,
+      connectionPoolSize: 3,
       connectTimeoutValue: 5000,
-      logger: console,
+      reconnectTimeoutValue: 1000,
     });
+    await client.connect(5000);
 
     const userModel = new Model({
       database: 'test',
@@ -166,8 +167,7 @@ async function benchmarkDianaDb() {
         tags: { type: Types.ARRAY, items: Types.STRING },
       },
     });
-    await client.connect(5000);
-
+    await userModel.init();
     const users = Array.from({ length: NUM_USERS }, generateUserDi);
     console.time('DianaDB Insert');
     for (const user of users) {
