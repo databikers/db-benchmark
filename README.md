@@ -6,7 +6,6 @@ npm i
 
 2. Prepare and start the infrastructure:
 ```shell
-sudo rm -rf data
 docker rmi db_test_diana-db:latest
 docker build -t diana-db:latest .
 docker-compose up -d
