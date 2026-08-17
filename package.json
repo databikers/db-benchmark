@@ -5,12 +5,12 @@
     "start": "node main.js"
   },
   "dependencies": {
-    "@diana-db/odm": "2.0.0",
+    "@diana-db/odm": "2.5.4",
     "faker": "^6.6.6",
-    "mongodb": "^7.4.0",
-    "mongoose": "^9.7.3",
+    "mongodb": "^7.5.0",
+    "mongoose": "^9.9.2",
     "pg": "^8.22.0",
-    "typeorm": "^1.0.0",
+    "typeorm": "^1.1.0",
     "uuid": "^14.0.1"
   }
 }
