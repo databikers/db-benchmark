@@ -5,7 +5,7 @@
     "start": "node main.js"
   },
   "dependencies": {
-    "@diana-db/odm": "2.5.4",
+    "@diana-db/odm": "3.0.0",
     "faker": "^6.6.6",
     "mongodb": "^7.5.0",
     "mongoose": "^9.9.2",
